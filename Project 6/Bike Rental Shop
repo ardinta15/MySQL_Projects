@@ -2,8 +2,7 @@ Scenario:
 
 Emily is the shop owner, and she would like to gather data to help her grow the
 business. She has hired you as an SQL specialist to get the answers to her
-business questions such as How many bikes does the shop own by category?
-What was the rental revenue for each month? etc. The answers are hidden in the
+business questions. The answers are hidden in the
 database. You just need to figure out how to get them out using SQL.
 
 The Bike Rental's database consists of 5 tables:
@@ -47,4 +46,37 @@ The Bike Rental's database consists of 5 tables:
       start_date: The start date of the membership.
       end_date: The end date of the membership.
       total_paid: The total amount paid for the membership.
+
+
+Problem Statements:
+
+1. Emily would like to know how many bikes the shop owns by category. Can you get this for her?
+Display the category name and the number of bikes the shop owns in
+each category (call this column number_of_bikes ). Show only the categories where the number of bikes is greater than 2.
+
+2. Emily needs a list of customer names with the total number of
+memberships purchased by each.
+For each customer, display the customer's name and the count of memberships purchased (call this column membership_count). 
+Sort the results by membership_count, starting with the customer who has purchased the highest number of memberships.
+Keep in mind that some customers may not have purchased any memberships yet. In such a situation, display 0 for the membership_count.
+
+3. Emily is working on a special offer for the winter months. Can you help her prepare a list of new rental prices?
+For each bike, display its ID, category, old price per hour (call this columnold_price_per_hour), discounted price per hour (call it new_price_per_hour ) 
+old price per day (call it old_price_per_day), and discounted price per day (call it new_price_per_day).
+
+Electric bikes should have a 10% discount for hourly rentals and a 20% discount for daily rentals. 
+Mountain bikes should have a 20% discount for hourly rentals and a 50% discount for daily rentals. 
+All other bikes should have a 50% discount for all types of rentals.
+Round the new prices to 2 decimal digits.
+
+4. Emily wants to segment customers based on the number of rentals and see the count of customers in each segment.
+Categorize customers based on their rental history as follows:
+
+Customers who have had more than 10 rentals are categorized as 'more than 10'
+Customers who have had 5 to 10 rentals (inclusive) are categorized as 'between 5 and 10'
+Customers who have had fewer than 5 rentals should be categorized as 'fewer than 5'
+
+Calculate the number of customers in each category. 
+Display two columns:
+rental_count_category (the rental count category) and customer_count (the number of customers in each category).
 
